@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            div {
+                /* border: 1px solid black; */
+            }
+            
+            #div1 {
+                position:absolute;
+                top: 10px;
+                left: 10px;
+                border: 1px solid black;
+            }
+            
+            #div2 {
+                position:absolute;
+                top: 10px;
+                left: 150px;
+                border: 1px solid black;
+            }
+            
+            #div3 {
+                position:absolute;
+                top: 10px;
+                left: 270px;
+                border: 1px solid black;
+            }
+            
+            #div4 {
+                position:absolute;
+                top: 200px;
+                left: 10px;
+                border: 1px solid black;
+            }
+        </style>
+        
+        <link rel="stylesheet" type="text/css" href="weather_style.css"/>
+        <link rel="stylesheet" type="text/css" href="calendar_style.css"/>        
+        
+        <script src="yahoo_weather.js"></script>
+        <script src="calendar_with_datetime.js"></script>
+        
+    </head>
+    <body>
+        <div id="div1"></div>
+        <div id="div2"></div>
+        <div id="div3"></div>
+        
+        <div id="div4"></div>
+        
+        <script>
+            function update_all_weathers() {
+                update_weather_info('div1', 'Magnitogorsk');
+                update_weather_info('div2', 'Moscow');
+                update_weather_info('div3', 'New York');
+                
+                // Every 15 minutes
+                setTimeout(update_all_weathers, 15 * 60 * 1000);
+            }
+            
+            function update_calendar() {
+                fill_calendar('div4');
+                setTimeout(update_calendar, 1000);
+            }
+            
+            update_all_weathers();
+            update_calendar();
+            
+        </script>
+    </body>
+</html>

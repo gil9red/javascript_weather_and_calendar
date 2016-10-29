@@ -1,0 +1,61 @@
+.center {
+    text-align: center;
+}
+
+#Calendar_Time {
+    font-family: Arial;
+    font-size: 270%;
+    color: rgb(67, 144, 226);
+}
+
+#Calendar_Date {
+    font-family: Arial;
+    font-size: 150%;
+    color: rgb(120, 141, 188);
+}
+
+
+#Calendar table {
+    width: 100%;
+    font: monospace;
+    line-height: 1.2em;
+    font-size: 15px;
+    text-align: center;
+}
+
+#Calendar thead tr:last-child {
+    color: rgb(85, 85, 85);
+}
+#Calendar thead tr:nth-child(1) td:nth-child(2) {
+    color: rgb(50, 50, 50);
+}
+#Calendar tbody td, thead th {
+    color: rgb(44, 86, 122);
+    border-bottom: 1px solid black; /* Bottom line */
+}
+
+/* Порядок важен, иначе текущий день для выходных будет окрашен белым */
+#Calendar tbody td.today {
+    color: white;
+}
+#Calendar tbody td.dayoff, #calendar tbody td.holiday {
+    color: rgb(231, 140, 92);
+}
+
+#Calendar tbody td {
+    width: 20px;
+    height: 20px;
+}
+
+#Calendar tbody td.today:before {
+    content: attr(data-char);
+    display: block;
+    background: rgb(67, 144, 226);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+#Calendar tbody td.other {
+    color: lightgray;
+}

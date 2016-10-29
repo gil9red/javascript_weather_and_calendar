@@ -1,0 +1,14 @@
+.city {
+    text-align: center;
+}
+.weather_text {
+    text-align: center;
+}
+
+.temp {
+    font-size: 270%;
+}
+.temp_type {
+    font-size: 100%;
+    vertical-align: top;
+}
